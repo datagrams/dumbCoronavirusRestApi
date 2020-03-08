@@ -70,7 +70,31 @@ Response should look like this:
     {
       ...
     }
+  ],
+  "_id": "5e64ec6026e7a77feef6c3b1",
+  "srcUpdated": "2020-03-08T12:59:00.000Z",
+  "dbUpdated": "2020-03-08T13:00:16.469Z",
+  "__v": 0
 
+```
+You can also filter by country
+``` bash
+curl http://localhost:3000/italy | jq
+```
+Response:
+``` json
+{
+  "country": "Italy",
+  "totalCases": 5883,
+  "newCases": 0,
+  "totalDeaths": 233,
+  "newDeaths": 0,
+  "totalRecovered": 589,
+  "activeCases": 5061,
+  "criticalCases": 5061,
+  "srcUpdate": "2020-03-08T12:59:00.000Z",
+  "dbUpdated": "2020-03-08T13:00:16.469Z"
+}
 ```
 ## Built With
 * Express JS
